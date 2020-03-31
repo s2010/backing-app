@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="@dimen/recipe_card_height"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/recipe_card_margin"
+    android:padding="@dimen/recipe_card_margin">
+
+    <ImageView
+        android:id="@+id/iv_thumb"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40sp" />
+
+    <TextView
+        android:id="@+id/tv_recipe_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="0dp"
+        android:gravity="bottom"
+        android:text="Recipe Name"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_servings"
+        app:layout_constraintTop_toBottomOf="@id/tv_recipe_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="top"
+        android:text="Servings: "
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="@dimen/separator_line_width"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <View
+        android:id="@+id/viewClicker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        />
+
+</android.support.constraint.ConstraintLayout>

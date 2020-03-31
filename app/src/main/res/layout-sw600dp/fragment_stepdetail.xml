@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/v_exoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/exoplayer_height" />
+
+    <ImageView
+        android:id="@+id/iv_exoplayer"
+        android:elevation="2dp"
+        android:padding="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/exoplayer_height"
+        android:tint="@color/colorWhite"
+        android:src="@drawable/ic_videocam_off_black_24dp"/>
+
+    <TextView
+        android:id="@+id/tv_step_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_exoplayer" />
+
+</android.support.constraint.ConstraintLayout>

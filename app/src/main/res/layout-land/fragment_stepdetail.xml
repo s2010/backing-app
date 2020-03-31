@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/v_exoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_exoplayer"
+        android:elevation="2dp"
+        android:padding="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tint="@color/colorWhite"
+        android:src="@drawable/ic_videocam_off_black_24dp"/>
+
+</android.support.constraint.ConstraintLayout>

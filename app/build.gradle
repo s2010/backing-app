@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.bash.backingapp"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+//    implementation 'com.android.support:support-annotations:27.1.1'
+
+    //Test
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support:support-annotations:27.1.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //for testing recyclerview
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2') {
+        // Necessary to avoid version conflicts
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude module: 'recyclerview-v7'
+    }
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1' // Logging
+
+    // JSON Parsing
+    implementation 'com.google.code.gson:gson:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    // Media Player
+    implementation 'com.google.android.exoplayer:exoplayer:r2.2.0'
+}
